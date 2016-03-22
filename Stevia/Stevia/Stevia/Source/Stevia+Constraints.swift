@@ -51,11 +51,14 @@ public extension UIView {
         }
     }
     
-    public func heightEqualsWidth() {
+    public func heightEqualsWidth() -> UIView {
         if let spv = superview {
             let c = constraint(item: self, attribute: .Height, toItem: self, attribute: .Width)
             spv.addConstraint(c)
         }
+	
+	return self
     }
     
 }
+
